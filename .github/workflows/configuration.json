@@ -3,8 +3,7 @@
     {
       "pattern": "(.*)/(.+)",
       "on_property": "branch",
-      "target": "$1",
-      "flags": "gu"
+      "target": "$1"
     }
   ]
 }
