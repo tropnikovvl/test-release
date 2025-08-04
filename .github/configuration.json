@@ -1,4 +1,22 @@
 {
+  "categories": [
+    {
+      "title": "## 🚀 Features",
+      "labels": ["feat", "feature"]
+    },
+    {
+      "title": "## 🐛 Fixes",
+      "labels": ["fix"]
+    },
+    {
+      "title": "## 📦 Uncategorized",
+      "labels": []
+    }
+  ],
+  "sort": {
+    "order": "ASC",
+    "on_property": "mergedAt"
+  },
   "label_extractor": [
     {
       "pattern": "(.*)/(.+)",
@@ -6,5 +24,8 @@
       "target": "$1",
       "flags": "gu"
     }
-  ]
+  ],
+  "template": "${{CHANGELOG}}",
+  "pr_template": " - *#${{NUMBER}}* ${{TITLE}} [@${{AUTHOR}}]",
+  "empty_template": "- no changes"
 }
