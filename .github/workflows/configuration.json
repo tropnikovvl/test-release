@@ -1,0 +1,10 @@
+{
+  "label_extractor": [
+    {
+      "pattern": "(.*)/(.+)",
+      "on_property": "branch",
+      "target": "$1",
+      "flags": "gu"
+    }
+  ]
+}

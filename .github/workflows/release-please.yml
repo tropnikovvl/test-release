@@ -18,6 +18,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         with:
           fetchViaCommits: true
+          configuration: "configuration.json"
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
