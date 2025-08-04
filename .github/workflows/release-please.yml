@@ -16,6 +16,8 @@ jobs:
         uses: mikepenz/release-changelog-builder-action@v5
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        with:
+          fetchViaCommits: true
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
