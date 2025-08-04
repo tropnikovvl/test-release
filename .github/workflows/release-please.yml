@@ -18,7 +18,18 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         with:
           fetchViaCommits: true
-          configuration: ".github/configuration.json"
+          # configuration: ".github/configuration.json"
+          configurationJson: |
+            {
+              "label_extractor": [
+                {
+                  "pattern": "(.*)/(.+)",
+                  "on_property": "branch",
+                  "target": "$1",
+                  "flags": "gu"
+                }
+              ]
+            }
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
